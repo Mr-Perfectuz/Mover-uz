@@ -24,7 +24,9 @@
      --font-family:  "Roboto", "Arial", sans-serif;
      --white: #fff;
      --black: #222;
-     --light-white: #e0e5e7
+     --light-white: #e0e5e7;
+     --dropdown-color: #78909c;
+
 
 }
 
@@ -87,6 +89,8 @@ img{
      margin: 0;
      padding: 0;
      list-style: none;
+     position: relative;
+     /* z-index: 50 ; */
 }
 
 .navbar-link{
@@ -100,7 +104,37 @@ img{
      transition: 0.3s;
 }
 
+.navbar-list:hover .navbar-link,
 .navbar-link:hover{
      opacity: 0.8;
      transition-delay: 0.5s ease;
+}
+.navbar-list:hover .dropdown{
+     display: block;
+}
+.dropdown{
+     display: none;
+     position: absolute;
+     padding: 0;
+     margin: 0;
+     left: -36px;
+     top: 31px;
+}
+
+.dropdown-item{
+     list-style: none;
+}
+
+.dropdown-link{
+     text-decoration: none;
+     background-color: var(--dropdown-color);
+     color: var(--white);
+     padding: 10px 15px;
+     display: block;
+     text-align: center;
+     white-space: nowrap;
+}
+
+.dropdown-link:hover{
+     background-color: rgb(199, 199, 199);
 }
